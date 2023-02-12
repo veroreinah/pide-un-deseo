@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pide un deseo ✨ - Club Náutico</title>
+
+    <script>
+      const onload = () => {
+        const url = new URL(window.location);
+        const params = new URLSearchParams(url.search);
+        const deseo = params.get("deseo");
+
+        if (deseo) {
+          let div = document.createElement("div");
+          div.className = "wish";
+
+          div.textContent = decodeURI(deseo);
+          document.getElementsByClassName("wrapper").item(0).prepend(div);
+        }
+      };
+    </script>
+  </head>
+  <body onload="onload()">
+    <div class="wrapper">
+      <form method="get">
+        <label for="deseo">Escribe tu deseo</label>
+        <input type="text" name="deseo" id="deseo" />
+        <button type="submit">y envíalo 🛸</button>
+      </form>
+      <div class="good-luck-items">
+        <span class="items-1">🤞</span>
+        <span class="items-1">🤞</span>
+        <span class="items-2">🍀</span>
+        <span class="items-2">🍀</span>
+        <span class="items-3">🥠</span>
+        <span class="items-3">🥠</span>
+        <span class="items-4">🔮</span>
+        <span class="items-4">🔮</span>
+        <span class="items-5">🧧</span>
+        <span class="items-5">🧧</span>
+        <span class="items-6">🌠</span>
+        <span class="items-6">🌠</span>
+        <span class="items-7">🐞</span>
+        <span class="items-7">🐞</span>
+        <span class="items-8">🌈</span>
+        <span class="items-8">🌈</span>
+        <span class="items-9">🦋</span>
+        <span class="items-9">🦋</span>
+        <span class="items-10">🙏</span>
+        <span class="items-10">🙏</span>
+        <span class="items-11">✨</span>
+        <span class="items-11">✨</span>
+        <span class="items-12">🐚</span>
+        <span class="items-12">🐚</span>
+        <span class="items-13">🕯</span>
+        <span class="items-13">🕯</span>
+        <span class="items-14">🧞‍♀️</span>
+        <span class="items-14">🧞‍♀️</span>
+        <span class="items-15">🧚‍♀️</span>
+        <span class="items-15">🧚‍♀️</span>
+        <span class="items-16">🦄</span>
+        <span class="items-16">🦄</span>
+      </div>
+      <a class="✨" href="/"> Pide otro ✨ </a>
+      <a class="⚓️" href="http://clubnautico.website/" target="_blank">
+        Club Náutico ⚓️
+      </a>
+    </div>
+  </body>
+</html>
