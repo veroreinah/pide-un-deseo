@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -12,8 +14,8 @@ form {
   position: absolute;
   left: 50%;
   top: 30%;
-  max-width: 250px;
   transform: translateX(-50%);
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   gap: 10px;
